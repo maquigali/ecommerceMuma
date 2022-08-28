@@ -1,5 +1,7 @@
 import logo from './logosolomuma.png';
 import './NavBar.css';
+import CartWidget from './CartWidget';
+
 
 
 const NavBar = () => {
@@ -16,6 +18,9 @@ const NavBar = () => {
 
                 </ul>
             </div>
+            <div>
+                <CartWidget/>
+             </div>
             <div>
                 <button>LOG IN</button>
             </div>
