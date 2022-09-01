@@ -5,6 +5,9 @@ import FunctionalComponent from './componentes/FunctionalComponents/FunctionalCo
 import ClassComponent from './componentes/ClassComponents/ClassComponent';
 import Saludo from './componentes/ItemListContainer/ItemListContainer';
 import Item from './componentes/Item/Item'
+import SuperForm from './componentes/SuperForm';
+import Counter from './componentes/Counter';
+
 
 function App() {
   return (
@@ -13,6 +16,13 @@ function App() {
       
       <header className="App-header">
         <Saludo/>
+       {/* <SuperForm title='Holis'>
+          <div>
+            <h2>Chauchis</h2>
+          </div>
+
+  </SuperForm>*/}
+        <Counter />
         
         {/*<ul>
           <Item nombre='Contacto' url={'/'} />
