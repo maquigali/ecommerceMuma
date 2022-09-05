@@ -3,7 +3,7 @@ import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
 import FunctionalComponent from './componentes/FunctionalComponents/FunctionalComponent';
 import ClassComponent from './componentes/ClassComponents/ClassComponent';
-import Saludo from './componentes/ItemListContainer/ItemListContainer';
+import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Item from './componentes/Item/Item'
 import SuperForm from './componentes/SuperForm';
 import Counter from './componentes/Counter';
@@ -15,7 +15,7 @@ function App() {
       <NavBar />
       
       <header className="App-header">
-        <Saludo/>
+        <ItemListContainer greeting={'Bienvenido a la Tienda de Rincon Muma!'}/>
        {/* <SuperForm title='Holis'>
           <div>
             <h2>Chauchis</h2>
