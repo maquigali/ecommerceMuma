@@ -7,24 +7,39 @@ import ItemListContainer from './componentes/ItemListContainer/ItemListContainer
 import Item from './componentes/Item/Item'
 import SuperForm from './componentes/SuperForm';
 import Counter from './componentes/Counter';
-
+import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { ContactoPage } from './componentes/ContactoPage/ContactoPage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <NavBar />
+      <Counter />
       
-      <header className="App-header">
+      <Routes>
+        <Route path="/" element={<ItemListContainer/>}></Route>
+        <Route path="/contacto" element={<ContactoPage/>}>
+        </Route>
+        
+        
+        {/*
+        
+      
+        <header className="App-header">
         <ItemListContainer greeting={'Bienvenido a la Tienda de Rincon Muma!'}/>
-       {/* <SuperForm title='Holis'>
+       
+        <SuperForm title='Holis'>
           <div>
             <h2>Chauchis</h2>
           </div>
 
-  </SuperForm>*/}
-        <Counter />
+  </SuperForm>
         
-        {/*<ul>
+        
+        
+        <ul>
           <Item nombre='Contacto' url={'/'} />
           <Item nombre='Contacto' url={'/'} />
           <Item nombre='Contacto' url={'/'} />
@@ -43,9 +58,12 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
-  </a> */}
-      </header>
+  </a> 
+        </header>*/}
+      </Routes>
+      <ItemDetailContainer />
     </div>
+    </BrowserRouter>
   );
 }
 

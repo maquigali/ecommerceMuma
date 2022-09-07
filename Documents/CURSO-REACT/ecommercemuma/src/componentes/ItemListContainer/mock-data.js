@@ -3,7 +3,7 @@ const data = [
     {
         id: 1,
         name: 'Arcoiris Waldorf',
-        description: 'Item 1 description',
+        description: 'Arcoiris de Madera pintado a mano en tonos pastel.',
         price: '$2000',
         image: '../Fotos/arcoiris.jpg',
         stock: 5
