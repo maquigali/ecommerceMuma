@@ -1,14 +1,22 @@
-import fotoarcoiris from '../Fotos/arcoiris.jpg'
+import Counter from "../Counter/Counter";
+import './ItemDetail.css';
 
-const ItemDetail = ({ produDetalles}) => {
+
+export const ItemDetail = ({ item }) => {
+    const onAdd = (dato) =>{
+        console.log("click", dato)
+    }
     
-    return <div>
-        <h1>ARCOIRIS WALDORF</h1>
-        <img src={fotoarcoiris} alt="fotoarcoiris"></img>
-        <h2>$2500</h2>
-        <p>Arcoiris Waldorf de madera, pintado a mano en colores pastel.</p>
-        
-    </div>
+    return (
+            <div className='detail-container'>
+                <h1>{item.name}</h1>
+                <img width="80%" src={item.image} alt={item.title}></img>
+                <h2 className="detail-fuentes">PRECIO:${item.price}</h2>
+                <p className="detail-fuentes">DETALLE: {item.description}</p>
+                <Counter stock={item.stock} initial={1} onAdd={onAdd}/>
+                
+            </div>
+    );
 };
 
-export default ItemDetail;
+

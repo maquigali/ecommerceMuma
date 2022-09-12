@@ -6,25 +6,42 @@ import ClassComponent from './componentes/ClassComponents/ClassComponent';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Item from './componentes/Item/Item'
 import SuperForm from './componentes/SuperForm';
-import Counter from './componentes/Counter';
+import Counter from './componentes/Counter/Counter';
 import ItemDetailContainer from './componentes/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ContactoPage } from './componentes/ContactoPage/ContactoPage';
+import { FaqsPage } from './componentes/FaqsPage/FaqsPage';
+import { QuienesSomosPage } from './componentes/QuienesSomosPage/QuienesSomosPage';
+
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
       <NavBar />
-      <Counter />
+      
       
       <Routes>
-        <Route path="/" element={<ItemListContainer/>}></Route>
-        <Route path="/contacto" element={<ContactoPage/>}>
-        </Route>
+        <Route path="/" element={<ItemListContainer greeting={'NUESTROS PRODUCTOS'}/>}></Route>        
+        <Route path="/:categoryId" element={<ItemListContainer/>}></Route>  
+        <Route path="/quienessomos" element={<QuienesSomosPage/>}></Route>
+        <Route path="/contacto" element={<ContactoPage/>}></Route>
+        <Route path="/faqs" element={<FaqsPage/>}></Route>
+        <Route path="/tienda/:productId" element={<ItemDetailContainer/>}></Route>
         
         
-        {/*
+      </Routes>
+
+      
+    </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+{/*
         
       
         <header className="App-header">
@@ -60,11 +77,3 @@ function App() {
           Learn React
   </a> 
         </header>*/}
-      </Routes>
-      <ItemDetailContainer />
-    </div>
-    </BrowserRouter>
-  );
-}
-
-export default App;

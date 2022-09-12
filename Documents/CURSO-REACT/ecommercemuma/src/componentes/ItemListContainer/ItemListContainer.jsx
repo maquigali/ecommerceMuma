@@ -2,10 +2,13 @@ import './style.css';
 import data from "./mock-data";
 import { useState, useEffect } from 'react';
 import ItemList from '../ItemList/ItemList';
-
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({greeting}) => {
-    const [items, setItems] = useState([]);
+
+    const {categoryId} = useParams();
+
+    const [item, setItems] = useState([]);
 
     const getData = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -16,18 +19,26 @@ const ItemListContainer = ({greeting}) => {
 
     useEffect (() => {
         getData.then((result) => {
-            setItems(result);
-            console.log(result);
+            if(categoryId){
+            const newProducts = result.filter(item=>item.categoria === categoryId);
+            setItems(newProducts);
+            console.log(newProducts);
+            } else{
+                setItems(result)
+            };
         });
        
-    }, []);
+    }, [categoryId]);
 
 
-    return ( <>
-    <ItemList itemList={items} />
-    </>);
+    return ( 
+            <><div className="greeting">{greeting}</div>
+            <div className='grid-items'>
+            <ItemList itemList={item} />
+            </div></>
+            );
     
-    //<div className="greeting">{greeting}</div>;
+    
     
 };
 

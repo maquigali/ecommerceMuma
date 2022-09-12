@@ -11,9 +11,10 @@ const ItemList = ({ itemList }) => {
                     return (
                         <Item 
                         name={producto.name} 
-                        image={producto.image}
-                        description={producto.description}
+                        image={producto.image}                        
                         price={producto.price}
+                        id={producto.id}
+                        categoria={producto.categoria}
                         />
     
                     )

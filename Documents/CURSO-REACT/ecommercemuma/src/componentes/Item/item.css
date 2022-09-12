@@ -1,0 +1,31 @@
+.div-items{
+
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+    color: #78a1a6;
+    
+
+}
+
+.precio-item{
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    color: #78a1a6;
+}
+
+.boton-detalle{
+    border: 3px solid #78a1a6;
+    color: #faf0e5;
+    background-color: #78a1a6;
+    border-radius: 12px;
+    font-size: 20px;
+    width: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+.boton-detalle:hover{
+    color: #F1D6D5;
+    background-color: #DB9996;
+    border: 3px solid #F1D6D5;
+    font-family: "Poppins", sans-serif;
+}

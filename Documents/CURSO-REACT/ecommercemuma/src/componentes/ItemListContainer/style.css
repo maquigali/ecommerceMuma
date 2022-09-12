@@ -1,4 +1,12 @@
 .greeting {
     color: rgb(120, 161, 166);
     font-size: xx-large;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.grid-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
 }
