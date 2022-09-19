@@ -12,31 +12,43 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ContactoPage } from './componentes/ContactoPage/ContactoPage';
 import { FaqsPage } from './componentes/FaqsPage/FaqsPage';
 import { QuienesSomosPage } from './componentes/QuienesSomosPage/QuienesSomosPage';
+import { CartProvider } from './componentes/context/CartContext';
+
+
 
 
 function App() {
   return (
+    <CartProvider>
     <BrowserRouter>
-    <div className="App">
-      <NavBar />
-      
-      
-      <Routes>
-        <Route path="/" element={<ItemListContainer greeting={'NUESTROS PRODUCTOS'}/>}></Route>        
-        <Route path="/:categoryId" element={<ItemListContainer/>}></Route>  
-        <Route path="/quienessomos" element={<QuienesSomosPage/>}></Route>
-        <Route path="/contacto" element={<ContactoPage/>}></Route>
-        <Route path="/faqs" element={<FaqsPage/>}></Route>
-        <Route path="/tienda/:productId" element={<ItemDetailContainer/>}></Route>
+      <div className="App">
+        <NavBar />        
         
-        
-      </Routes>
+        <Routes>
+          <Route path="/" element={<ItemListContainer greeting={'NUESTROS PRODUCTOS'}/>}></Route>        
+          <Route path="/:categoryId" element={<ItemListContainer/>}></Route>  
+          <Route path="/quienessomos" element={<QuienesSomosPage/>}></Route>
+          <Route path="/contacto" element={<ContactoPage/>}></Route>
+          <Route path="/faqs" element={<FaqsPage/>}></Route>
+          <Route path="/tienda/:productId" element={<ItemDetailContainer/>}></Route>
+          
+          
+        </Routes>
 
       
-    </div>
+      </div>
     </BrowserRouter>
+    </CartProvider>
+    
+
+
+      
+    
+   
   );
 }
+
+
 
 export default App;
 
