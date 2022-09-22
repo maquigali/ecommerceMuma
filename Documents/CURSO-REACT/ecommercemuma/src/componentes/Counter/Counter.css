@@ -25,6 +25,12 @@
     
     
 }
+
+.div-boton-agregar{
+    padding-bottom: 5px;
+
+}
+
 .boton-agregar{
     border: 3px solid #78a1a6;
     color: #faf0e5;

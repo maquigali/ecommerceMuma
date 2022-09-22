@@ -13,6 +13,7 @@ import { ContactoPage } from './componentes/ContactoPage/ContactoPage';
 import { FaqsPage } from './componentes/FaqsPage/FaqsPage';
 import { QuienesSomosPage } from './componentes/QuienesSomosPage/QuienesSomosPage';
 import { CartProvider } from './componentes/context/CartContext';
+import { CartContainer } from './componentes/CartContainer/CartContainer';
 
 
 
@@ -31,6 +32,8 @@ function App() {
           <Route path="/contacto" element={<ContactoPage/>}></Route>
           <Route path="/faqs" element={<FaqsPage/>}></Route>
           <Route path="/tienda/:productId" element={<ItemDetailContainer/>}></Route>
+          <Route path="/cart" element={<CartContainer/>}></Route>
+          
           
           
         </Routes>
