@@ -63,7 +63,7 @@ const data = [
         name: 'Pelota Montessori',
         categoria: 'pelotas',
         description: 'Es de 15 cm de diámetro, de tela, rellena de vellón y con cascabeles en su interior. Producto lavable.',
-        price: 1000,
+        price: 2400,
         image: pelota,
         stock: 8
 
