@@ -1,0 +1,133 @@
+.div-tienda-productos{
+    color: #DB9996;
+    font-size: medium;     
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin: 0px auto; 
+    background-color: transparent;
+    width: 320px;
+    border-radius: 20px;
+    border: 3px solid #DB9996;
+    min-height: 50%;
+    padding: 20px;
+
+    
+}
+
+.div-tienda-order{
+    color: #78a1a6;
+    font-size: medium;     
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 5px;
+    padding-left: 2px;
+    
+
+}
+
+.div-boton-vaciar{
+    padding-top: 5px;
+}
+.div-tienda-volver{
+    color: #78a1a6;
+    font-size: large;     
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    padding: 5px;
+
+
+}
+
+.link-volver{
+    color:#DB9996
+}
+
+.boton-tienda{
+    border: 3px solid #DB9996;
+    color: #faf0e5;
+    background-color: #DB9996;
+    border-radius: 12px;
+    font-size: 15px;
+    width: auto;
+    font-family: "Poppins", sans-serif;
+    padding-top: 5px;
+}
+
+.boton-tienda:hover{
+    color: #DB9996;
+    background-color: #F1D6D5;
+    border: 3px solid #DB9996;
+    font-family: "Poppins", sans-serif;
+}
+
+.boton-eliminar{
+    background-color: transparent;
+    color: #DB9996;
+    border:3px solid #DB9996;
+    font-family: "Poppins", sans-serif;
+    border-radius: 12px;
+    font-size: 15px;
+    width: auto;
+    padding: 5px;
+    margin-top: 2px;
+}
+
+.boton-eliminar:hover{
+    background-color: #DB9996;
+    color: #faf0e5;
+    border:3px solid #faf0e5;
+
+}
+
+.nombre-item{
+    font-weight: bold;
+    text-decoration: underline;
+    color:#DB9996
+}
+
+.recuadro-style{
+    background-color: #CFE8DE;
+    color: #78a1a6;
+    border:2px solid #78a1a6;
+    font-family: "Poppins", sans-serif;
+    border-radius: 18px;
+    font-size: medium;
+    width: auto;
+    border-color: #78a1a6;
+    margin-left: 5px;  
+    margin-right: 3px;  
+    padding: 1%;
+    
+   
+  
+
+}
+
+
+.recuadro-style:hover {
+    background-color: white;
+    color: #78a1a6; 
+}
+
+
+.recuadro-style:focus {
+        outline: none; 
+}
+
+.boton-enviar{
+    background-color: transparent;
+    color: #78a1a6;
+    border:3px solid #78a1a6;
+    font-family: "Poppins", sans-serif;
+    border-radius: 12px;
+    font-size: 15px;
+    width: auto;
+    padding: 5px;
+    margin-top: 8px;
+}
+
+.boton-enviar:hover{
+    background-color: #78a1a6;
+    color: #faf0e5;
+    border:3px solid #faf0e5;
+}

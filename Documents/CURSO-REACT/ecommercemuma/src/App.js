@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './componentes/NavBar/NavBar';
-import FunctionalComponent from './componentes/FunctionalComponents/FunctionalComponent';
-import ClassComponent from './componentes/ClassComponents/ClassComponent';
 import ItemListContainer from './componentes/ItemListContainer/ItemListContainer';
 import Item from './componentes/Item/Item'
 import SuperForm from './componentes/SuperForm';

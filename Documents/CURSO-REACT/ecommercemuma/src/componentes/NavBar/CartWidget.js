@@ -9,9 +9,11 @@ const CartWidget = () => {
 
     return (
         <div>
+            <Link to="/cart">
             
                 <img width={'50px'} src={logoCart} alt="logo" />
-                <span>2</span>
+                <span>0</span>
+            </Link>
             
         </div>
            

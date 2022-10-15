@@ -43,9 +43,7 @@ const NavBar = () => {
                     <CartWidget/>
                 </Link>
              </div>
-            <div>
-                <button>LOG IN</button>
-            </div>
+            
 
         </div>
     );

@@ -4,6 +4,8 @@ import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import { db } from "../../utils/firebase";
 import { collection, addDoc, doc, updateDoc } from "firebase/firestore"; 
+import './CartContainer.css';
+
 
 
 export const CartContainer = () => {
@@ -69,48 +71,56 @@ const updateOrder = () =>{
     return (
         
         <div>
-            <button onClick={updateOrder}>actualizar orden</button>
-            {idOrder && <p>su orden fue creada, id {idOrder}</p>}
+           
+            {idOrder && <p className="nombre-item"> Su pedido fue creado! El id es: {idOrder}</p>}
         
             {
             productCartList.length > 0 ?
-                    <div>
+                    <div >
                     {productCartList.map(item=>(
-                        <div>                    
-                        <p>{item.name}</p>
-                        <p>
-                        CANTIDAD: {item.quantity}</p>
-                        <p>PRECIO UNIDAD: $ {item.price}</p>
-                        <p>TOTAL: {item.quantityPrice}</p>                        
-                        <button onClick={()=>removeItem(item.id)}>eliminar</button>
+                        <div className="div-tienda-productos" >                    
+                            <p className="nombre-item">{item.name}</p>
+                            <p>Cantidad: {item.quantity}</p>
+                            <p>Precio por unidad: $ {item.price}</p>
+                            <p className="nombre-item">TOTAL  : $ {item.quantityPrice}</p>                        
+                            <button className="boton-eliminar" onClick={()=>removeItem(item.id)}>eliminar</button>
                         
                         </div>
                     
                     
                     ))}
-                    <button onClick={clear}>Vaciar</button>
-                    <button onClick={()=>isInCart()}>validacion</button>
-                    <p>TOTAL: {getTotalPrice()}</p>
+
+                    <div className="div-boton-vaciar">
+
+                        <button className="boton-tienda" onClick={clear}>Vaciar Carrito</button>
+                    </div>
+                    
+                    <p className="nombre-item">TOTAL : $ {getTotalPrice()}</p>
+
+                    <div className="div-tienda-order">
 
 
-                    <form onSubmit={sendOrder}>
-                        <label>Nombre:</label>
-                        <input type="text"/>
-                        <label>Tel:</label>
-                        <input type="text"/>
-                        <label>Mail:</label>
-                        <input type="email"/>
-                        <button type='submit'>Enviar orden</button>
-                    </form>
+                        <form onSubmit={sendOrder}>
+                            <label>Nombre:</label>
+                            <input className="recuadro-style" type="text"/>
+                            <label>Tel:</label>
+                            <input className="recuadro-style" type="text"/>
+                            <label>Mail:</label>
+                            <input className="recuadro-style" type="email"/>
+                            <div className="div-tienda-order">
+                                <button className="boton-enviar" type='submit'>Enviar Pedido!</button>
+                            </div>
+                        </form>
+
+                    </div>
 
                 </div>
              :
-                    <div>
-                    
-                    <p>Tu carrito esta vacio!</p>
-                    <Link to="/">
-                        VER TODOS LOS PRODUCTOS                  
-                    </Link>
+                    <div className="div-tienda-volver">                    
+                        <p>Tu carrito esta vacio!</p>
+                        <Link className="link-volver" to="/">
+                            VER TODOS LOS PRODUCTOS                  
+                        </Link>
                     </div>
             }
 

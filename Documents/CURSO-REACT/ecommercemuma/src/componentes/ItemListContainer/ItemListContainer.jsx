@@ -12,7 +12,6 @@ import { doc, getDoc, collection, getDocs, query, where } from "firebase/firesto
 const ItemListContainer = ({greeting}) => {
 
     const {categoryId} = useParams();
-
     const [item, setItems] = useState([]);
     
          
