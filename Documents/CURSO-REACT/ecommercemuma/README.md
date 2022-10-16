@@ -1,3 +1,12 @@
+# PROYECTO ECOMMERCE RINCON MUMA
+
+#### Cosniste en un ecommerce para vender los productos de la Tienda Rincon Muma, que vende juguetes, juegos y accesorios para bebes y niños pequeños.
+
+## ENLACES:
+[GIF](https://giphy.com/embed/Uaej2fJO3cdri3RZmZ)
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
